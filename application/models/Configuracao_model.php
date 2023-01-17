@@ -4,8 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Configuracao_model extends CI_Model
 {
 
-    public function __construct()
-    {
+    public function __construct(){
         parent::__construct();
         $this->load->dbforge();
         $this->load->dbutil();
