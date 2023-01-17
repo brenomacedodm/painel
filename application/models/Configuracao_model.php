@@ -120,7 +120,7 @@ class Configuracao_model extends CI_Model
                 return true;
             } else {
                 $admin = $this->db->get_where('usuarios', array('login' => 'admin'));
-                if($admin->row_count() == 0){
+                if($admin->num_rows() == 0){
                     $sql = "INSERT INTO `usuarios` (`nome_usuario`, `login`, `senha`) VALUES ('Admin', 'admin', '123456')";
                     $this->db->query($sql);
                 }
